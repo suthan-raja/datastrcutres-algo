@@ -18,8 +18,8 @@ public class JavaRead {
         List<String> list = new ArrayList<String>();
         List<String> list2 = new ArrayList<String>();
 
-        try(BufferedReader bufferedReader = new BufferedReader(new FileReader("D:\\Suthan\\Updated_Codes\\learn\\algo\\mas.txt"))) {
-            BufferedReader file2 = new BufferedReader(new FileReader("D:\\Suthan\\Updated_Codes\\learn\\algo\\interviewer.txt"));
+        try(BufferedReader bufferedReader = new BufferedReader(new FileReader( filePath + "\\mas.txt"))) {
+            BufferedReader file2 = new BufferedReader(new FileReader(filePath + "\\interviewer.txt"));
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                list.add(line);
