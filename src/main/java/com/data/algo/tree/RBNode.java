@@ -1,5 +1,8 @@
 package com.data.algo.tree;
 
+import org.springframework.stereotype.Component;
+
+
 class RBNode {
     int data;
     RBNode parent, left, right;
