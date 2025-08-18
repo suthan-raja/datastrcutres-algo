@@ -25,7 +25,7 @@ class GrandParent {
 
     static class GrandMother {
 
-        //        name = "";
+        //  name = "";
         void land() {
             System.out.println("GrandMother");
         }
@@ -42,6 +42,10 @@ class Parent {
 
     String name = "Parent ";
 
+    public static void display(){
+        System.out.println("static parent method");
+    }
+
     void land() {
         System.out.println("Parent land");
     }
@@ -49,6 +53,10 @@ class Parent {
 }
 
 class Child extends Parent {
+
+    public static void display(){
+        System.out.println("static child method");
+    }
 
     String name = "Child ";
 
@@ -106,6 +114,7 @@ public class ClassRelations {
         System.out.println(child2.name);
 
         child2.land();
+
 
 
     }
