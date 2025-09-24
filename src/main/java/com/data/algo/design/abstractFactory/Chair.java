@@ -46,6 +46,13 @@ class VictorianFurnitureFactory  implements FurnitureFactory {
 class Client {
     public static void main(String[] args) {
         FurnitureFactory furnitureFactory = new ModernFurnitureFactory();
+
+        /*Chair chair = furnitureFactory.createChair();
+        Sofa sofa = furnitureFactory.createSofa();
+
+        chair.sitOn(); // Sitting on Modern Chair
+        sofa.lieOn();  // Lying on Modern Sofa*/
+
         furnitureFactory.createChair().sitOn();
         furnitureFactory.createSofa().lieOn();
 
