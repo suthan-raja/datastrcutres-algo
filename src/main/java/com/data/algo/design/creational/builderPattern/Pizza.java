@@ -1,4 +1,4 @@
-package com.data.algo.design.builderPattern;
+package com.data.algo.design.creational.builderPattern;
 
 public class Pizza {
     private String dough;

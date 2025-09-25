@@ -1,22 +1,24 @@
-package com.data.algo.design.prototype;
+package com.data.algo.design.creational.prototype;
 
-class Address {
+class AddressDeep {
     String city;
-    Address(String city) { this.city = city; }
+    AddressDeep(String city) { this.city = city; }
 }
 
-class Person implements Cloneable {
+class PersonDeep implements Cloneable {
     String name;
     AddressDeep address;
 
-    Person(String name, AddressDeep address) {
+    PersonDeep(String name, AddressDeep address) {
         this.name = name;
         this.address = address;
     }
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
-        return super.clone();  // shallow copy
+        PersonDeep cloned = (PersonDeep) super.clone();
+        cloned.address = new AddressDeep(this.address.city); // deep copy
+        return cloned;
     }
 
     @Override
@@ -25,16 +27,16 @@ class Person implements Cloneable {
     }
 }
 
-public class ShallowCopyExample {
+public class DeepCopyExample {
     public static void main(String[] args) throws CloneNotSupportedException {
         AddressDeep addr = new AddressDeep("New York");
         PersonDeep p1 = new PersonDeep("John", addr);
 
-        PersonDeep p2 = (PersonDeep) p1.clone(); // shallow copy
+        PersonDeep p2 = (PersonDeep) p1.clone(); // deep copy
         p2.name = "Mike";
-        p2.address.city = "Los Angeles"; // modifies shared object
+        p2.address.city = "Los Angeles"; // does NOT affect p1
 
-        System.out.println(p1); // John lives in Los Angeles
+        System.out.println(p1); // John lives in New York
         System.out.println(p2); // Mike lives in Los Angeles
     }
 }

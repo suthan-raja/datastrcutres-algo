@@ -1,4 +1,4 @@
-package com.data.algo.design.prototype;
+package com.data.algo.design.creational.prototype;
 
 public class Employee implements Cloneable {
 

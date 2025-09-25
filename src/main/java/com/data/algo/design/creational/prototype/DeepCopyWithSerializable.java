@@ -1,4 +1,4 @@
-package com.data.algo.design.prototype;
+package com.data.algo.design.creational.prototype;
 
 import java.io.Serializable;
 
@@ -60,7 +60,7 @@ class Travel implements Serializable {
 public class DeepCopyWithSerializable {
     public static void main(String[] args) {
         Bus bus = new Bus("yes", "no");
-        Train train = new Train("yes", "no");
+        Train train = new Train("yes", "no"); // creates object
         Travel travel = new Travel("Suthan", train, bus);
         System.out.println(travel);
 

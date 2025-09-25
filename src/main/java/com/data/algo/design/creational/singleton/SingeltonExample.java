@@ -1,4 +1,4 @@
-package com.data.algo.design.singleton;
+package com.data.algo.design.creational.singleton;
 
 public class SingeltonExample {
 

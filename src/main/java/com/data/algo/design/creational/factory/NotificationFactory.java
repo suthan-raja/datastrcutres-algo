@@ -1,4 +1,4 @@
-package com.data.algo.design.factory;
+package com.data.algo.design.creational.factory;
 
 interface Notification {
     void sendMessage(String message);

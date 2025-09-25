@@ -1,4 +1,4 @@
-package com.data.algo.design.abstractFactory;
+package com.data.algo.design.creational.abstractFactory;
 
 interface Chair {
     void sitOn();
