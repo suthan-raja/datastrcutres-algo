@@ -25,7 +25,6 @@ public class AlgoApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
 		SpringApplication app = new SpringApplication(AlgoApplication.class);
-
 		// Listener #1: Environment prepared (very early)
 		app.addListeners((ApplicationListener<ApplicationEnvironmentPreparedEvent>) event -> {
 			Environment env = event.getEnvironment();
